@@ -16,6 +16,7 @@
   --cl-icons-hover: #31D0AA;
 
   /* Others */
+  --anim-fast: 250ms;
 }
 /* #endregion */
 
@@ -168,6 +169,8 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .header-nav-link {
   padding-top: 24px;
   padding-bottom: 24px;
+  transition: var(--anim-fast);
+  transition-property: color;
 }
 .header-nav-link:hover,
 .header-nav-link:focus {
@@ -214,12 +217,13 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-address-link {
   text-decoration: none;
+  transition: var(--anim-fast);
+  transition-property: color;
 }
 .header-address-link:hover,
 .header-address-link:focus {
   cursor: pointer;
   color: var(--cl-links);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* #endregion */
 
@@ -441,11 +445,12 @@ rgba(46, 47, 66, 0.7)),
   min-width: 360px;
   width: calc((100% - 48px) / 3);
   cursor: pointer;
+  transition: var(--anim-fast);
+  transition-property: color;
 }
 
 .portfolio-list-item:hover {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-wrapper {
@@ -465,8 +470,7 @@ rgba(46, 47, 66, 0.7)),
   align-items: top;
   background-color: var(--cl-accent);
   backdrop-filter: blur(8px);
-  transition-property: transform;
-  transition-duration: 2000ms;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 40px 32px;
   color: var(--cl-background-light);
   font-size: 16px;
@@ -478,7 +482,6 @@ rgba(46, 47, 66, 0.7)),
 .portfolio-wrapper:hover .overlay {
   transform: translateY(0);
   opacity: 1;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-ill {
